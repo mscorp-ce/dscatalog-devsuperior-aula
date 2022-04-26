@@ -1,3 +1,51 @@
-.btn-icon {
+.btn-container {
+    display: flex;
+}
+
+.btn-container button {
+    border-radius: 10px 0px 0px 10px;
+}
+
+.btn h6 {
+    color: #FFF;
+    margin-top: 5px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.btn-icon-container {
+    width: 50px;
     height: 50px;
+    padding: 7px;
+    border-radius: 0px 10px 10px 0px;
+    background-color: #33569B;
+}
+
+
+@media (min-width: 576px) {
+    .btn-icon-container {
+        padding: 0.5px;
+    }
+}
+
+@media (min-width: 992px) {
+    .btn-icon-container {
+        width: 120px;
+        height: 90px;  
+        padding: 1px; 
+    }
+
+    .btn h6 {
+        font-size: 18px;
+        margin-top: 3px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .btn-icon-container {
+        width: 70px;
+        height: 70px;  
+        justify-content: center;
+        align-items: center;
+    }
 }

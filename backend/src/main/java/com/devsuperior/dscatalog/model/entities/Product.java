@@ -40,16 +40,24 @@ public class Product implements Serializable {
 				inverseJoinColumns = @JoinColumn(name ="category_id"))
 	Set<Category> categories = new HashSet<>();        
 	
-	public Product() {
-
-	}
-
-	public Product(Long id, String name, String description, Double price, String imgUrl) {
+	public Product(long id, String name, String description, Double price, String imgUrl, Instant instant) {
 		this.id = id;
 		this.name = name;
 		this.description = description;
 		this.price = price;
 		this.imgUrl = imgUrl;
+	}
+
+	public Product(Long id, String name, String description, Double price, String instant) {
+		this.id = id;
+		this.name = name;
+		this.description = description;
+		this.price = price;
+		this.imgUrl = instant;
+	}
+
+	public Product() {
+		// TODO Auto-generated constructor stub
 	}
 
 	public Long getId() {
