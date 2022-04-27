@@ -9,6 +9,7 @@ import java.util.Set;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.PastOrPresent;
 import javax.validation.constraints.Positive;
+import javax.validation.constraints.Size;
 
 import com.devsuperior.dscatalog.model.entities.Category;
 import com.devsuperior.dscatalog.model.entities.Product;
@@ -19,6 +20,7 @@ public class ProductDTO implements Serializable {
 	
 	private Long id;
 	
+	@Size(min = 5, max = 60, message = "O campo name deve ter entre 5 e 60 caracteres")
 	@NotBlank(message = "Campo requerido")
 	private String name;
 	
